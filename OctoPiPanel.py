@@ -208,12 +208,12 @@ class OctoPiPanel():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 print "quit"
-		self.done = True
+                self.done = True
 
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_ESCAPE:
                     print "Got escape key"
-		    self.done = True
+                    self.done = True
 
                 # Look for specific keys.
                 #  Could be used if a keyboard is connected
@@ -226,31 +226,31 @@ class OctoPiPanel():
                 if 'click' in self.btnHomeXY.handleEvent(event):
                     self._home_xy()
 
-                if 'click' in self.btnHomeZ.handleEvent(event):
+                if 'down' in self.btnHomeZ.handleEvent(event):
                     self._home_z()
 
-                if 'click' in self.btnZUp.handleEvent(event):
+                if 'down' in self.btnZUp.handleEvent(event):
                     self._z_up()
 
-                if 'click' in self.btnHeatBed.handleEvent(event):
+                if 'down' in self.btnHeatBed.handleEvent(event):
                     self._heat_bed()
 
-                if 'click' in self.btnHeatHotEnd.handleEvent(event):
+                if 'down' in self.btnHeatHotEnd.handleEvent(event):
                     self._heat_hotend()
 
-                if 'click' in self.btnStartPrint.handleEvent(event):
+                if 'down' in self.btnStartPrint.handleEvent(event):
                     self._start_print()
 
-                if 'click' in self.btnAbortPrint.handleEvent(event):
+                if 'down' in self.btnAbortPrint.handleEvent(event):
                     self._abort_print()
 
-                if 'click' in self.btnPausePrint.handleEvent(event):
+                if 'down' in self.btnPausePrint.handleEvent(event):
                     self._pause_print()
 
-                if 'click' in self.btnReboot.handleEvent(event):
+                if 'down' in self.btnReboot.handleEvent(event):
                     self._reboot()
 
-                if 'click' in self.btnShutdown.handleEvent(event):
+                if 'down' in self.btnShutdown.handleEvent(event):
                     self._shutdown()
             
             # Did the user click on the screen?
